@@ -1,0 +1,28 @@
+<html>
+<body>
+
+<p>Check your grade</p>
+Enter grade:<input type="text"><br>
+<input type="button" value="Confirm">
+
+<p id="result"></p>
+
+<script>
+  var input =document.querySelectorAll("input");
+  var passornot;
+  input[1].onclick = function(){
+
+  var score = Number(input[0].value);
+
+  if (score >= 60) {
+    passornot = "Passed";
+  } else {
+    passornot = "Failed";
+  }
+
+  document.getElementById("result").innerHTML = passornot;
+}
+</script>
+
+</body>
+</html>

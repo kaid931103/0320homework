@@ -1,0 +1,60 @@
+<html> 
+<head> 
+
+</head> 
+<body> 
+<form> 
+First integer:<br> 
+<input type="number" id="number1" value=" "> 
+<br> 
+Second integer:<br> 
+<input type="number" id="number2" value=" "> 
+<br><br> 
+
+</form> 
+<script> 
+function add() { 
+var p1, p2 
+p1=parseFloat(document.getElementById("number1").value); 
+p2=parseFloat(document.getElementById("number2").value); 
+document.getElementById("result").innerHTML = p1+p2; 
+return p1+p2; 
+} 
+function subtract() { 
+var p1, p2 
+p1=parseFloat(document.getElementById("number1").value); 
+p2=parseFloat(document.getElementById("number2").value); 
+document.getElementById("result").innerHTML = p1-p2; 
+return p1-p2; 
+} 
+function multiplication() { 
+var p1, p2 
+p1=parseFloat(document.getElementById("number1").value); 
+p2=parseFloat(document.getElementById("number2").value); 
+document.getElementById("result").innerHTML = p1*p2; 
+return p1*p2; 
+} 
+function division() { 
+var p1, p2 
+p1=parseFloat(document.getElementById("number1").value); 
+p2=parseFloat(document.getElementById("number2").value); 
+document.getElementById("result").innerHTML = p1/p2; 
+return p1/p2; 
+} 
+function clearNum() {
+    document.getElementById("number1").value='0';
+    document.getElementById("number2").value='0';
+    document.getElementById("result").value = " ";
+    document.getElementById("result").focus();
+    }
+</script> 
+<button onclick="add()">+</button> 
+<button onclick="subtract()">-</button> 
+<button onclick="multiplication()">*</button> 
+<button onclick="division()">/</button> 
+<button onclick="clearNum()">Cancel</button>
+
+<h2>Answer:</h2> 
+<output id="result"></output> 
+</body> 
+</html>
